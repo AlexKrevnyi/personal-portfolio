@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono:wght@400;700&display=swap');
+
+.contact-me {
+    display: inline-block;
+	font-family: 'Share Tech Mono', monospace;
+    font-size: 1em;
+    border-radius: 8px;
+    padding: 10px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--grey);
+    box-shadow: 4px 4px 0px var(--black);
+}
+
+.contact-me span {
+    position: relative;
+    margin-left: -8px;
+    animation: jump 1.6s infinite;
+}
+
+/*Jumping Letters*/
+
+@keyframes jump {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: 6px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+.contact-me span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.contact-me span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.contact-me span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.contact-me span:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.contact-me span:nth-child(6) {
+    animation-delay: 1s;
+}
+
+.contact-me span:nth-child(7) {
+    animation-delay: 1.2s;
+}
+
+.contact-me span:nth-child(8) {
+    animation-delay: 1.4s;
+}
+
+.contact-me span:nth-child(9) {
+    animation-delay: 1.6s;
+}
+
+.contact-me:active {
+  	transform: translateX(2px) translateY(2px);
+  	box-shadow: 2px 2px 0 var(--black);
+}
+
+@media (max-width: 52rem) {
+
+    .contact-me {
+        border: 1px solid black;
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+
+}
+
+
