@@ -126,7 +126,7 @@ li a {
     display: flex;
     flex-wrap: wrap;
     font-size: 1em;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .skills {
@@ -221,37 +221,41 @@ li a {
 }
 
 .about-wrapper h1 {
-    font-size: 60px;
+    font-size: 50px;
     text-align: center;
 }
 
 .about-tag {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .bio-paragraph p {
     font-family: 'B612 Mono', monospace;
     font-size: 21px;
     line-height: 1.7;
-    margin-top: 4rem;
-    text-indent: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-indent: 3rem;
 }
 
 .about-image-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(4, minmax(0, 1fr));
     max-width: 100%;
     grid-gap: 1.5rem;
+    max-height: 400px;
+    min-width: 0;
 }
-
 
 
 .about img {
     object-fit: cover;
     width: 100%;
     height: 100%;
+    border-radius: 10px;
 }
 
 .item-1 {
@@ -295,6 +299,44 @@ li a {
     grid-column: 4 / 5;
 }
 
+/*Waves*/
+
+.waves {
+    width: 100%;
+    height: auto;
+}
+
+
+/*Facts About Me*/
+
+.facts {
+    display: flex;
+}
+
+.facts h1 {
+    font-size: 50px;
+}
+
+.quick-facts {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border-right: 5px solid var(--violet);
+    height: 500px;
+}
+
+.random-facts {
+    width: 50%;
+}
+
+.blocks {
+    padding: 1rem 2rem;
+    border: 1px solid black;
+    width: 200px;
+    margin-bottom: 5.5rem;
+}
+
+
 
 
 
@@ -308,6 +350,7 @@ li a {
 
         .welcome-text {
             width: 100%;
+            margin-top: 2rem;
         }
 
         .welcome-text h1 {
@@ -317,6 +360,14 @@ li a {
         .photo-container {
             width: 100%;
             justify-content: center;
+        }
+
+        .first-page {
+            padding-top: 0;
+        }
+
+        .about-tag {
+            margin-top: 4rem;
         }
 
 /*Tablet Visual Element*/
@@ -427,6 +478,7 @@ li a {
 
     .welcome-text {
         width: 100%;
+        margin-top: 1rem;
     }
 
     .welcome-text h1 {
@@ -434,14 +486,14 @@ li a {
     }
 
     .welcome-text p {
-        font-size: 1.25rem;
+        font-size: 1em;
     }
 
 /*Mobile Visual Element*/
 
     .visual-element {
         width: 250px;
-        height: 230px;
+        height: 223px;
     
 }    
 
@@ -454,12 +506,38 @@ li a {
     }
 
 /*Mobile Image Grid Container*/
+
     .image-grid {
         margin: 1rem 20px 1rem 20px;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     }
 
+/* Mobile About Me Page*/
+
+    .about-wrapper {
+        margin: 0 20px;
+    }
+
+    .about-wrapper h1 {
+        font-size: 48px;
+        text-align: center;
+    }    
+
+    .bio-paragraph p {
+        font-size: 1em;
+        margin-top: 1rem;
+        line-height: 1.5;
+    }
+
+    .caret {
+        width: 45px;
+        height: 45px;
+    }
+
+    .about-tag {
+        margin-top: 3rem;
+    }
 
 
 
