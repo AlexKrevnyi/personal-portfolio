@@ -314,6 +314,7 @@ li a {
     display: flex;
     margin: 0 60px;
     gap: 2rem;
+    margin-top: 4rem;
 }
 
 .facts h1 {
@@ -362,38 +363,51 @@ li a {
 
 .education-container {
     margin: 0 60px;
-    padding-top: 4rem;
 }
 
 
-.edelement-1 {
+.edelement {
     padding: 40px 100px;
     border: 1px solid black;
+    display: flex;
     position: relative;
     margin-left: 40px;
+    border-radius: 2rem;
+    box-shadow: 7px 7px #000;
+    margin-top: 2rem;
+    background-color: var(--grey);
 }
 
-.edelement-1 p {
+.edelement p {
     font-family: 'B612 Mono', monospace;
     font-size: 21px;
     line-height: 1.7;
 }
 
-
-
-.edelement-1::after {
-    content: "";
-    background-color: red;
-    border: 1px solid black;
-    border-radius: 50%;
-    position: absolute;
+.date {
     width: 80px;
-    aspect-ratio: 1;
-    left: -40px;
-    bottom: 0;
+    height: 80px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: var(--violet);
+    position: absolute;
     top: 0;
+    bottom: 0;
     margin: auto;
+    left: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.date p {
+    color: white;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 2rem;
+
+}
+
+
 
 
 
@@ -446,6 +460,14 @@ li a {
     .facts {
         margin: 4rem 60px;
     }
+
+/*Education Container*/
+    
+    .edelement {
+         padding: 40px 40px 40px 100px;
+    }    
+
+    
 
     }
 
@@ -601,6 +623,38 @@ li a {
     .about-tag {
         margin-top: 3rem;
     }
+
+/*Education Container*/
+
+    .education-container {
+        margin: 0 20px;
+    }
+
+    .edelement {
+        padding: 20px 20px 20px 40px;
+        border-radius: 2rem;
+        margin-left: 20px;
+    }
+        
+    .edelement p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .date {
+        width: 45px;
+        height: 45px;
+        left: -20px;
+    }
+
+    .date p {
+        font-size: 1rem;
+    }
+
+
+
+
+
 
 
 
