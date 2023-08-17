@@ -18,3 +18,14 @@ navToggle.addEventListener('click', () => {
 		primaryNav.setAttribute('data-visible', false);
 		navToggle.setAttribute('aria-expanded', false);
 	}))
+
+//Accordions
+
+const accordions = document.querySelectorAll('.accordion');
+
+accordions.forEach(accordion => {
+	accordion.addEventListener('click', e => {
+		accordion.classList.toggle('active');
+	})
+})
+
