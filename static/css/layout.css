@@ -313,8 +313,8 @@ li a {
 .accord-container {
     margin-top: 2rem;
     margin-bottom: 4rem;
-    border: 1px solid black;
-    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 5px 3px #000;
 }
 
 .job-list-header {
@@ -322,8 +322,8 @@ li a {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    border: 1px solid black;
     padding: 1rem 2rem;
+    border-bottom: 2px solid black;
 }
 
 .time {
@@ -355,7 +355,26 @@ li a {
 
 .accord-body {
     display: none;
+    background-color: var(--violet);
+    opacity: 0.8;
+    color: var(--white);
+    border-bottom: 2px solid black;
 }
+
+.accord-body p {
+    margin-left: 2rem;
+    padding: 1rem 0;
+    font-family: 'B612 Mono', monospace;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.accord-body p:before {
+    content: '●';
+    margin-right: 5px;
+}
+
 
 button.plus {
     background: url("../images/plus.svg");
@@ -363,11 +382,29 @@ button.plus {
     height: 40px;
     background-size: cover;
     border: none;
+    transition: 0.5s;
+}
+
+.accordion.active .plus {
+    transform: rotate(45deg);
+    transition: 0.5s;
 }
 
 .accordion.active .accord-body {
     display: block;
+    animation: acc 0.7s;
+    animation-fill-mode: forwards;
 }
+
+@keyframes acc {
+   from {
+    opacity: 0;
+   }
+   to {
+    opacity: 0.8;
+   }
+}
+
 
 
 
@@ -621,7 +658,12 @@ button.plus {
     .position {
         width: 120px;
     }
+/*Tablet Accordion Body*/
 
+    .accord-body p {
+        padding: 0.5rem 0;
+        margin-left: 1rem;
+    }
 
 /*Tablet Education Container*/
 
@@ -892,6 +934,16 @@ button.plus {
         width: 30px;
         height: 30px;
     }
+
+/*Mobile Accordion Body*/
+
+    .accord-body p {
+        padding: 0.5rem 0;
+        margin-left: 0.5rem;
+        font-size: 1rem;
+        font-family: 'Share Tech Mono', monospace;
+    }
+
 
 
 
