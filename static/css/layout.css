@@ -375,7 +375,6 @@ li a {
     margin-right: 5px;
 }
 
-
 button.plus {
     background: url("../images/plus.svg");
     width: 40px;
@@ -492,6 +491,78 @@ button.plus {
 .bl9 {
     grid-row: 9 / 11;
     grid-column: 5 / 11;
+}
+
+/*My Skills Container*/
+
+.my-skills-container {
+    margin: 2rem 60px 4rem 60px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background-color: var(--grey);
+    border-radius: 2rem;
+    padding: 2rem 4rem;
+    box-shadow: 0px 1px 2px 0px rgba(113, 70, 224, 1),
+            1px 2px 4px 0px rgba(113, 70, 224, 1),
+            2px 4px 8px 0px rgba(113, 70, 224, 1),
+            2px 4px 16px 0px rgba(113, 70, 224, 1);
+}
+
+.mcont {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'B612 Mono', monospace;
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 2rem 0;
+    gap: 1rem;
+    align-items: center;
+}
+
+.mname {
+    min-width: 210px;
+}
+
+.mobile-js {
+    display: none;
+    }
+
+.mcap {
+    width: 6rem;
+    height: 3rem;
+    border-radius: 10px;
+    box-shadow: 3px 3px black;
+    border: 1px solid black;
+}
+
+.mh1, .mh2, .mh3, .mh4, .mc1, .mc2, .mc3, .mc4, .mf1, .mf2, .mf3, .mj1, .mj2, .mg1, .mg2 {
+    background-color: var(--violet);
+}
+
+.mh5, .mj3, .mc5, .mf4, .mg3 {
+    background-color: var(--violet);
+    animation: hblink 800ms infinite alternate;
+}
+
+/*.mc5 {
+    background-color: var(--violet);
+    animation: hblink 700ms 500ms infinite alternate;
+}
+
+.mf4, .mg3 {
+    background-color: var(--violet);
+    animation: hblink 800ms 200ms infinite alternate;
+}
+*/
+
+@keyframes hblink {
+    from {
+        opacity: 0.7;
+    }
+    to {
+        opacity: 0.1;
+    }
 }
 
 /*Education Container*/
@@ -664,6 +735,31 @@ button.plus {
         padding: 0.5rem 0;
         margin-left: 1rem;
     }
+
+/*Tablet My Skills Container*/
+
+    .my-skills-container {
+        margin: 2rem 40px 4rem 40px;
+        padding: 2rem;
+    }
+
+    .mcont {
+        font-size: 26px;
+        padding: 1rem 0;
+    }
+
+    .mname {
+        min-width: 100px;
+    }
+
+    .desktop-js {
+        display: none;
+    }
+
+    .mobile-js {
+        display: block;
+    }
+
 
 /*Tablet Education Container*/
 
@@ -943,6 +1039,36 @@ button.plus {
         font-size: 1rem;
         font-family: 'Share Tech Mono', monospace;
     }
+
+/*Mobile My Skills Container*/
+
+    .my-skills-container {
+        margin: 1rem 20px 3rem 20px;
+        padding: 1rem;
+    }
+
+    .mcont {
+        font-size: 18px;
+        padding: 1rem 0;
+    }
+
+    .mname {
+        min-width: 70px;
+    }
+
+    .mcap {
+        width: 4rem;
+        height: 2rem;
+    }
+
+    .desktop-js {
+        display: none;
+    }
+
+    .mobile-js {
+        display: block;
+    }
+
 
 
 

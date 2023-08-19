@@ -27,5 +27,7 @@ accordions.forEach(accordion => {
 	accordion.addEventListener('click', e => {
 		accordion.classList.toggle('active');
 	})
-})
+});
+
+
 
