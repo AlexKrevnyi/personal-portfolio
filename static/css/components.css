@@ -20,6 +20,12 @@
     animation: jump 1.6s infinite;
 }
 
+.contact-me a {
+    text-decoration: none;
+    color: var(--black);
+    margin: 10px;
+}
+
 /*Jumping Letters*/
 
 @keyframes jump {

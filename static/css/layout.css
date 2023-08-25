@@ -41,10 +41,10 @@ body {
     display: none;
 }
 
-li a {
+.nav-links a {
     text-decoration: none;
     color: var(--black);
-    padding: 10px;
+    margin: 10px;
 }
 
 
@@ -707,19 +707,22 @@ footer {
 .footer-wrapper {
     margin: 0 auto;
     max-width: 1160px;
-    padding: 4rem 0 2rem 0;
+    padding: 4rem 0 1rem 0;
 }
 
 .fcont {
     margin: 0 60px;
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
+    height: auto;
+    padding-bottom: 2rem;
 }
 
 .social {
    display: flex;
-   flex-direction: column;
-   gap: 1rem;
+   gap: 2rem;
+   align-items: center;
 }
 
 .footer-heading span {
@@ -734,16 +737,25 @@ footer {
     gap: 1rem;
 }
 
-.flinks {
-   
+.footer-navigation {
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: flex-end
 }
 
 .footer-navigation li {
     padding-bottom: 10px;
 }
 
+.footer-link a {
+    text-decoration: none;
+    color: var(--black);
+    margin: 10px;
+}
+
 .akre {
     text-align: center;
+    font-size: 1rem;
 }
 
 
@@ -924,6 +936,27 @@ footer {
     .project-tag p {
         font-size: 26px;
     }
+
+/*Tablet Footer*/
+
+    .fcont {
+        margin: 0 40px;
+    }
+
+    .footer-heading span {
+        font-size: 26px;
+    }
+
+    .footer-logo img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .social {
+        gap: 1rem;
+    }
+
+
 
  
 
@@ -1251,6 +1284,50 @@ footer {
         font-size: 18px;
     }
 
+/*Mobile Footer*/
+
+    .footer-wrapper {
+        padding: 3rem 0 1rem 0;
+    }
+
+    .fcont {
+        margin: 0 20px;
+        flex-direction: column;
+    }
+
+    .social {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-heading span {
+        font-size: 26px;
+    }
+
+
+    .footer-logo img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .footer-navigation {
+        flex-direction: column;
+        margin-top: 2rem;
+        align-items: flex-start;
+    }
+
+    .footer-navigation li {
+        padding-bottom: 1rem;
+    }
+
+    .footer-link a {
+        margin: 0;
+    }
+    
+
+
+
 
 
 
@@ -1322,6 +1399,15 @@ footer {
      .second-project:hover img {
         transform: scale(1.05);
         transition: 250ms;
+    }
+
+    .footer-link a:hover {
+        cursor: pointer;
+        color: var(--violet);
+    }
+
+    .footer-logo a:hover {
+        opacity: 0.5;
     }
 
 
