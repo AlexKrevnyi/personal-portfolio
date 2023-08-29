@@ -222,7 +222,6 @@ body {
 
 .about-tag h1 {
     font-size: 50px;
-    text-align: center;
 }
 
 .caret {
@@ -632,7 +631,7 @@ button.plus {
             2px 4px 8px 0px rgba(113, 70, 224, 1),
             2px 4px 16px 0px rgba(113, 70, 224, 1);
     cursor: pointer;
-    background: url("../images/shapes3.svg"); 
+    background: url("../images/first-shape.svg"); 
     background-size: contain;
 }
 
@@ -698,6 +697,80 @@ button.plus {
     color: var(--white);
 }
 
+/*My Story Tag*/
+
+.slash h1 {
+    position: relative;
+    text-align: right;
+}
+
+.about-tag.slash {
+    margin-bottom: 4rem;
+    margin-left: 60px;
+    margin-right: 60px;
+    position: relative;
+    justify-content: flex-end;
+}
+
+.slash span {
+    color: var(--violet);
+}
+
+
+.slash h1::after,
+.slash h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.slash h1::after {
+    width: 0.125em;
+    background: black;
+    animation: 
+        typewriter 4s steps(13) 1s forwards,
+        blink 750ms steps(13) infinite;
+}
+
+.slash h1::before {
+    background: var(--white);
+    animation: typewriter 4s steps(13) 1s forwards;
+}
+
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
+
+.last-text {
+    margin: 0 60px 4rem 60px;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeIn 2s ease 6s forwards;
+}
+
+.last-text p {
+    font-size: 26px;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 /*Footer*/
 
 footer {
@@ -757,6 +830,7 @@ footer {
     text-align: center;
     font-size: 1rem;
 }
+
 
 
 
@@ -956,6 +1030,13 @@ footer {
         gap: 1rem;
     }
 
+/*Tablet My Story Tag*/
+
+.about-tag.slash {
+    margin-bottom: 4rem;
+    margin-left: 40px;
+    margin-right: 40px;
+}
 
 
  
@@ -1284,6 +1365,15 @@ footer {
         font-size: 18px;
     }
 
+
+/*Mobile My Story Tag*/
+
+.about-tag.slash {
+    margin-bottom: 4rem;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 /*Mobile Footer*/
 
     .footer-wrapper {
@@ -1408,6 +1498,7 @@ footer {
 
     .footer-logo a:hover {
         opacity: 0.5;
+        transition: 200ms;
     }
 
 
