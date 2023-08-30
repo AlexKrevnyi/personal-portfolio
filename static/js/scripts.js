@@ -29,24 +29,31 @@ accordions.forEach(accordion => {
 	})
 });
 
-//Faders 
+//Intersectional Observer
 
-const images = document.querySelector('.about-tag');
+const images = document.querySelectorAll('.about-tag');
 
 
 observer = new IntersectionObserver((entries) => {
 
-	console.log(entries);
+	entries.forEach(entry => {
+		if(entry.intersectionRatio > 0) {
+			entry.target.style.animation = 'anim1 2s forwards'
+		}
+		else {
+			entry.target.style.animation = 'none';
+		}
 
-	if(entries[0].intersectionRatio > 0) {
-		entries[0].target.style.animation = 'anim1 2s forwards'
-	}
-	else {
-		entries[0].target.style.animation = 'none';
-	}
+	})
+
+	
 })
 
-observer.observe(images)
+images.forEach(image => {
+	observer.observe(image)
+})
+
+
 
 
 
