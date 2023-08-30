@@ -29,5 +29,28 @@ accordions.forEach(accordion => {
 	})
 });
 
+//Faders 
+
+const images = document.querySelector('.about-tag');
+
+
+observer = new IntersectionObserver((entries) => {
+
+	console.log(entries);
+
+	if(entries[0].intersectionRatio > 0) {
+		entries[0].target.style.animation = 'anim1 2s forwards'
+	}
+	else {
+		entries[0].target.style.animation = 'none';
+	}
+})
+
+observer.observe(images)
+
+
+
+
+
 
 
