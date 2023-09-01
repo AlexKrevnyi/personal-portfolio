@@ -107,6 +107,14 @@ body {
 
 .image-card {
     width: 100%;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.image-card.appear {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 2s;
 }
 
 .image-card img {
@@ -586,6 +594,22 @@ button.plus {
     margin-top: 2rem;
     background-color: var(--grey);
 }
+
+.edelement:nth-child(odd) {
+    transform: translateX(-50%);
+}
+
+.edelement:nth-child(even) {
+    transform: translateX(50%);
+}
+
+.edelement:nth-child(odd).appear,
+.edelement:nth-child(even).appear {
+    transform: translateX(0);
+    transition: transform 2s;
+}
+
+
 
 .edelement p {
     font-family: 'B612 Mono', monospace;
@@ -1190,7 +1214,7 @@ footer {
     }
 
     .about-tag h1 {
-        font-size: 40px;
+        font-size: 35px;
         text-align: center;
     }    
 
@@ -1375,11 +1399,23 @@ footer {
 
 /*Mobile My Story Tag*/
 
-.about-tag.slash {
-    margin-bottom: 4rem;
-    margin-left: 20px;
-    margin-right: 20px;
-}
+    .slash {
+        margin-bottom: 4rem;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .slash h1 {
+        font-size: 35px;
+    }
+
+    .last-text p {
+        font-size: 1em;
+    }
+
+    .last-text.anim1.fade {
+        margin: 0 20px 3rem 20px;
+    }
 
 /*Mobile Footer*/
 

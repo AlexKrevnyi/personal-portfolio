@@ -83,6 +83,8 @@ sections.forEach(section => {
 
 */
 
+//About Tags Faders Observer
+
 const faders = document.querySelectorAll('.fade-in');
 const appearOptions = {
 	threshold: 1,
@@ -109,9 +111,12 @@ faders.forEach(fader => {
 	appearOnScroll.observe(fader);
 });
 
+//My Story Fader Observer
+
 const typewriter = document.querySelectorAll('.anim1');
 const fadeOptions = {
-
+	threshold: 1,
+	rootMargin: "0px 0px -100px 0px"
 };
 
 const appearTypewriter = new IntersectionObserver
@@ -133,6 +138,42 @@ const appearTypewriter = new IntersectionObserver
 	typewriter.forEach(typewriter => {
 		appearTypewriter.observe(typewriter);
 	});
+
+
+//Sliders Observer 
+
+const sliders = document.querySelectorAll('.edelement');
+const slideOptions = {
+	threshold: 0,
+};
+const images = document.querySelectorAll('.image-card');
+	
+const slideOnScroll = new IntersectionObserver
+	(function(
+		entries, 
+		slideOnScroll
+		) {
+		entries.forEach(entry => {
+			if(!entry.isIntersecting) {
+				return;
+			} else {
+				entry.target.classList.add('appear');
+				slideOnScroll.unobserve(entry.target);
+			}
+		});
+	},
+	slideOptions);
+
+	sliders.forEach(slider => {
+		slideOnScroll.observe(slider);
+	});
+
+	images.forEach(image => {
+		slideOnScroll.observe(image);
+	})
+
+
+
 
 
 
