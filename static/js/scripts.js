@@ -111,6 +111,7 @@ faders.forEach(fader => {
 	appearOnScroll.observe(fader);
 });
 
+
 //My Story Fader Observer
 
 const typewriter = document.querySelectorAll('.anim1');
@@ -139,7 +140,6 @@ const appearTypewriter = new IntersectionObserver
 		appearTypewriter.observe(typewriter);
 	});
 
-
 //Sliders Observer 
 
 const sliders = document.querySelectorAll('.edelement');
@@ -147,6 +147,7 @@ const slideOptions = {
 	threshold: 0,
 };
 const images = document.querySelectorAll('.image-card');
+const aboutImages = document.querySelectorAll('.about'); 
 	
 const slideOnScroll = new IntersectionObserver
 	(function(
@@ -170,7 +171,39 @@ const slideOnScroll = new IntersectionObserver
 
 	images.forEach(image => {
 		slideOnScroll.observe(image);
-	})
+	});
+
+	aboutImages.forEach(aboutImage => {
+		slideOnScroll.observe(aboutImage);
+	});
+
+//Accordion Observer
+
+	const workExs = document.querySelector('.accord-container');
+	const workSlideOptions = {
+		rootMargin: "-100px"
+	};
+	const mySkills = document.querySelector('.my-skills-container');
+
+	const workSlide = new IntersectionObserver 
+	(function(
+		entries, 
+		workSlide){
+		entries.forEach(entry => {
+			if (!entry.isIntersecting) {
+				return;
+			} else {
+				entry.target.classList.add('appear');
+				workSlide.unobserve(entry.target);
+			}
+		});
+	},
+	workSlideOptions);
+
+	workSlide.observe(workExs);
+	workSlide.observe(mySkills);
+
+
 
 
 
