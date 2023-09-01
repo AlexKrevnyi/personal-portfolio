@@ -90,6 +90,7 @@ const appearOptions = {
 	threshold: 1,
 	rootMargin: "0px 0px -100px 0px"
 };
+const blocks = document.querySelectorAll('.blocks');
 
 const appearOnScroll = new IntersectionObserver
 	(function(
@@ -110,6 +111,11 @@ const appearOnScroll = new IntersectionObserver
 faders.forEach(fader => {
 	appearOnScroll.observe(fader);
 });
+
+blocks.forEach(block => {
+	appearOnScroll.observe(block);
+});
+
 
 
 //My Story Fader Observer
@@ -177,7 +183,7 @@ const slideOnScroll = new IntersectionObserver
 		slideOnScroll.observe(aboutImage);
 	});
 
-//Accordion Observer
+//Accordion Observer/My Skills Observer
 
 	const workExs = document.querySelector('.accord-container');
 	const workSlideOptions = {
