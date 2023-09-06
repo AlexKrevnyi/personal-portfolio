@@ -209,6 +209,10 @@ const slideOnScroll = new IntersectionObserver
 	workSlide.observe(workExs);
 	workSlide.observe(mySkills);
 
+//CircleType Animated Text
+
+const circleType = new CircleType
+	(document.getElementById('rotated'));
 
 
 

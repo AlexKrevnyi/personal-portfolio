@@ -832,6 +832,57 @@ button.plus {
 
 /*Circular Text*/
 
+.cirk-cont {
+    height: 200px;
+    position: relative;
+}
+
+.circular-text {
+    font-size: 1rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rotate {
+    animation: spin 15s infinite linear;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(360deg);
+    }
+    
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.arrow {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+ion-icon {
+    font-size: 70px;
+    animation: arrow 1s infinite;
+}
+
+@keyframes arrow {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
 
 /*Footer*/
 
