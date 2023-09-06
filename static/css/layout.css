@@ -830,7 +830,7 @@ button.plus {
     }
 }
 
-/*Circular Text*/
+/*Circular Text*/ 
 
 .cirk-cont {
     height: 200px;
@@ -865,22 +865,13 @@ button.plus {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-
+    cursor: pointer;
+    color: black;
+    transition: 200ms;
 }
 
 ion-icon {
     font-size: 70px;
-    animation: arrow 1s infinite;
-}
-
-@keyframes arrow {
-    0% {
-        transform: translateY(0px);
-    }
-
-    100% {
-        transform: translateY(-5px);
-    }
 }
 
 
@@ -1495,6 +1486,20 @@ footer {
         margin: 0 20px 3rem 20px;
     }
 
+/*Mobile Circular Text*/  
+
+    .cirk-cont {
+        height: 150px;
+    }   
+
+    .circular-text {
+        font-size: 12px;
+    }
+
+    ion-icon {
+        font-size: 50px;
+    }
+
 /*Mobile Footer*/
 
     .footer-wrapper {
@@ -1515,7 +1520,6 @@ footer {
     .footer-heading span {
         font-size: 26px;
     }
-
 
     .footer-logo img {
         width: 26px;
@@ -1610,6 +1614,11 @@ footer {
      .second-project:hover img {
         transform: scale(1.05);
         transition: 250ms;
+    }
+
+    .arrow:hover {
+        opacity: 0.5;
+        transition: 200ms;
     }
 
     .footer-link a:hover {
