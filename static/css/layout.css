@@ -338,11 +338,14 @@ body {
     border: 2px solid black;
     box-shadow: 5px 3px #000;
     transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 250ms;
 }
 
 .accord-container.appear {
     transform: translateX(0);
     transition: transform 1s ease-out;
+    opacity: 1;
 }
 
 .job-list-header {
@@ -539,11 +542,14 @@ button.plus {
             2px 4px 8px 0px rgba(113, 70, 224, 1),
             2px 4px 16px 0px rgba(113, 70, 224, 1);    
     transform: translateX(50%); 
+    opacity: 0;
+    transition: opacity 250ms;
 }
 
 .my-skills-container.appear {
     transform: translateX(0);
     transition: transform 1s ease-out;
+    opacity: 1;
 }
 
 .mcont {
@@ -1574,7 +1580,7 @@ footer {
         color: var(--violet);
     }
 
-    .contact-me:hover {
+    button.plus:hover {
         opacity: 0.6;
     }
 
@@ -1630,7 +1636,6 @@ footer {
         opacity: 0.5;
         transition: 200ms;
     }
-
 
 
 

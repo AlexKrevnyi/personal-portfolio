@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=B612+Mono:wght@400;700&display=swap');
 
-.contact-me {
+.cont-btn {
     display: inline-block;
 	font-family: 'Share Tech Mono', monospace;
     font-size: 1em;
@@ -73,14 +73,145 @@
     animation-delay: 1.6s;
 }
 
-.contact-me:active {
+.cont-btn:active {
   	transform: translateX(2px) translateY(2px);
   	box-shadow: 2px 2px 0 var(--black);
 }
 
-@media (max-width: 52rem) {
+/*Contact Pop Up Form*/
 
-    .contact-me {
+.modal {
+    max-width: 420px;
+    max-height: 100%;
+    padding: 2rem 2rem;
+    border-radius: 10px;
+    background-color: var(--grey);
+    border: 2px solid black;
+    
+}
+
+.modal::backdrop {
+    backdrop-filter: blur(10px);
+}
+
+.modal h2 {
+    font-size: 26px;
+    color: var(--violet);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.modal p {
+    font-size: 1rem;
+}
+
+
+.cont-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.cont-form label {
+    margin: 1rem 0  0.5rem 0;
+    font-family: 'B612 Mono', monospace;
+}
+
+textarea {
+    margin: 2rem 0 2rem 0;
+    padding: 10px;
+    font-family: 'B612 Mono', monospace;
+    font-size: 1em;
+    box-shadow:  4px 4px black;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: var(--smoke);
+    transition: 150ms;
+}
+
+.cont-form input {
+    box-shadow:  4px 4px black;
+    border-radius: 8px;
+    border: 2px solid black;
+    font-size: 1em;
+    padding: 10px;
+    font-family: 'B612 Mono', monospace;
+    background-color: var(--smoke);
+    transition: 150ms;
+}
+
+::placeholder {
+    opacity: 0.7;
+    font-size: 1rem;
+}
+
+.cont-form input:focus {
+    box-shadow: none;
+    border-color: var(--violet);
+}
+
+textarea:focus {
+    box-shadow: none;
+    border-color: var(--violet);
+}
+
+textarea:hover, input:hover {
+    box-shadow: none;
+    transition: 150ms;
+}
+
+.form-submit {
+    padding: 10px;
+    font-family: 'B612 Mono', monospace;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: var(--violet);
+    color: var(--smoke);
+    box-shadow: 4px 4px black;
+    border: 2px solid black;
+    border-radius: 8px;
+    transition: 150ms;
+}
+
+.form-submit:hover {
+    cursor: pointer;
+    box-shadow: none;
+    background-image: linear-gradient(
+      45deg,
+      hsl(257deg 71% 58%) 0%,
+      hsl(260deg 73% 59%) 11%,
+      hsl(263deg 75% 60%) 22%,
+      hsl(265deg 76% 61%) 33%,
+      hsl(268deg 78% 62%) 44%,
+      hsl(271deg 80% 63%) 56%,
+      hsl(273deg 82% 65%) 67%,
+      hsl(275deg 84% 66%) 78%,
+      hsl(278deg 86% 67%) 89%,
+      hsl(280deg 89% 68%) 100%
+    );
+    transition: 150ms;
+}
+
+.close-btn {
+    padding: 10px;
+    margin-top: 1em;
+    font-family: 'B612 Mono', monospace;
+    font-size: 1em;
+    text-transform: uppercase;
+    background-color: var(--smoke);
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.close-btn:hover {
+    cursor: pointer;
+}
+    
+
+@media (max-width: 35rem) {
+
+    .cont-btn {
         border: 1px solid black;
         margin-top: 0.5rem;
         margin-bottom: 1.5rem;

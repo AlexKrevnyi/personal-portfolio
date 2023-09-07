@@ -214,6 +214,20 @@ const slideOnScroll = new IntersectionObserver
 const circleType = new CircleType
 	(document.getElementById('rotated'));
 
+//Contact Me Pop Up Form
+	const openModal = document.querySelector('.cont-btn');
+	const closeModal = document.querySelector('.close-btn');
+	const subtimModal = document.querySelector('.submit-form');
+
+
+	openModal.addEventListener('click', () => {
+		modal.showModal();
+	})
+
+	closeModal.addEventListener('click', () => {
+		modal.close();
+	})
+
 
 
 
