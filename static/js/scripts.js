@@ -14,7 +14,7 @@ navToggle.addEventListener('click', () => {
 });
 
 //Links
-	document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+	document.querySelectorAll('.link-close').forEach(n => n.addEventListener('click', () => {
 		primaryNav.setAttribute('data-visible', false);
 		navToggle.setAttribute('aria-expanded', false);
 	}))
@@ -227,6 +227,42 @@ const circleType = new CircleType
 	closeModal.addEventListener('click', () => {
 		modal.close();
 	})
+
+//Sent Message Contact Form
+
+	function alert() {
+		var name = document.getElementById('name');
+		var email = document.getElementById('email');
+		var msg = document.getElementById('message');
+		const success = document.getElementById('success');
+		const danger = document.getElementById('danger');
+
+		if (name.value === ''|| email.value === '' || msg.value === '') {
+			danger.style.display = 'block';
+		}
+			else {
+				setTimeout(() => {
+					name.value = '';
+					email.value = '';
+					msg.value = '';
+				}, 2000);
+
+				success.style.display = 'block';
+			}
+
+		setTimeout(() => {
+			danger.style.display = 'none';
+			success.style.display = 'none';
+		}, 4000);	
+
+	};
+
+//Validate Email 
+
+
+
+
+
 
 
 

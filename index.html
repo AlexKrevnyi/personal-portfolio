@@ -34,10 +34,10 @@
 				</div>
 				<nav>
 					<ul class="primary-navigation" id="primary-navigation" data-visible="false">
-						<li class="nav-links"><a href="#aboutme" class="menuItem">About Me</a></li>
-						<li class="nav-links"><a href="#portfolio" class="menuItem">Portfolio</a></li>
+						<li class="nav-links link-close"><a href="#aboutme" class="menuItem">About Me</a></li>
+						<li class="nav-links link-close"><a href="#portfolio" class="menuItem">Portfolio</a></li>
 						<button class="cont-btn">	
-							<li class="contact-me">
+							<li class="contact-me link-close">
 								<a href="#contact-me" class="menuItem">
 									<span>C</span>
 									<span>o</span>
@@ -74,12 +74,16 @@
 				
 				<form class="cont-form" method="dialog">
 					<label for="name">Name</label>
-					<input type="text" name="">
+					<input type="text" id="name" name="name">
 					<label for="email">Email</label>
-  					<input type="email" id="email" name="email" class="input-form" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required> 
-  					<textarea id="message" name="item-description" rows="4" maxlength="700" class="input-form" placeholder="Enter your message" required></textarea>
-					<button class="form-submit">Send Email</button>
-					<button class="close-btn">Close</button>
+  					<input type="email" name="email" id="email" onkeyup="validateEmail()"> 
+  					<textarea id="message" name="message" rows="4" maxlength="700" placeholder="Enter your message"></textarea>
+					<button onclick="alert()" type="button" class="form-submit" id="sent">Send Email</button>
+					<button type="button" class="close-btn">Close</button>
+					<div class="message">
+						<div class="success" id="success">Your message was successfully sent.Thanks</div>
+						<div class="danger" id="danger">Validation errors occurred. Please confirm the fields and submit it again.</div>
+					</div>
 				</form>
 				
 				
