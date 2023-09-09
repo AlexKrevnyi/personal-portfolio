@@ -21,7 +21,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 60px;
+    margin: 0 60px;
+    padding: 20px 0;
 
 }
 
@@ -674,7 +675,8 @@ button.plus {
 /*My Projects*/
 
 .my-projects {
-    margin: 4rem 60px 4rem 60px;  
+    margin: 0 60px 4rem 60px; 
+    padding-top: 4rem; 
 }
 
 .project-cont {
@@ -961,7 +963,7 @@ footer {
 @media (min-width: 35rem) and (max-width: 64rem) {
 
     .header-container {
-        margin: 20px 40px;
+        margin: 0 40px;
     }
 
     .first-page-wrapper {
@@ -985,17 +987,14 @@ footer {
     }
 
     .first-page {
-        padding-top: 0;
+        padding-top: 4rem;
     }
 
     .about-wrapper {
         margin: 0 40px;
     }
 
-    .about-tag {
-        margin-top: 4rem;
-    }
-
+   
 /*Tablet Visual Element*/
 
     .visual-element {
@@ -1111,10 +1110,15 @@ footer {
          padding: 40px 40px 40px 70px;
     }    
 
+/*Random Facts*/
+    .facts {
+        margin-bottom: 0;
+    }
+
 /*Tablet My Projects*/
 
     .my-projects {
-        margin: 2rem 40px 4rem 40px;  
+        margin: 0 40px 4rem 40px;  
     }
 
     .first-project, .second-project {
@@ -1217,7 +1221,7 @@ footer {
     }
 
     .header-container {
-        margin: 20px 20px;
+        margin: 0 20px;
         max-width: 100%;
         max-height: 80px;
     }
@@ -1308,13 +1312,12 @@ footer {
         line-height: 1.5;
     }
 
-
     .about-tag {
-        margin-top: 3rem;
+        padding-top: 3rem;
     }
 
     .facts {
-        margin: 3rem 20px;
+        margin: 0 20px;
     }
 
     .random-facts {
@@ -1381,7 +1384,7 @@ footer {
     }    
 
     .accord-container {
-        margin-bottom: 3rem;
+        margin-bottom: 0;
     }
 
     .job-list-header {
@@ -1427,7 +1430,7 @@ footer {
 /*Mobile My Skills Container*/
 
     .my-skills-container {
-        margin: 1rem 20px 3rem 20px;
+        margin: 1rem 20px 0 20px;
         padding: 1rem;
     }
 
@@ -1458,7 +1461,8 @@ footer {
 /*Mobile My Projects*/
 
     .my-projects {
-        margin: 0rem 20px 4rem 20px;  
+        margin: 0rem 20px 4rem 20px; 
+        padding-top: 0; 
     }
 
     .project-cont {
