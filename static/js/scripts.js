@@ -1,3 +1,6 @@
+
+//Mobile Nav Menu
+
 const primaryNav = document.querySelector('.primary-navigation');
 const navToggle = document.querySelector('.mobile-nav-toggle');
 
@@ -28,60 +31,6 @@ accordions.forEach(accordion => {
 		accordion.classList.toggle('active');
 	})
 });
-
-//Intersectional Observer
-
-/*
-const images = document.querySelectorAll('.about-tag');
-
-
-observer = new IntersectionObserver((entries) => {
-
-	entries.forEach(entry => {
-		if(entry.intersectionRatio > 0) {
-			entry.target.style.animation = 'anim1 2s forwards'
-		}
-		else {
-			entry.target.style.animation = 'none';
-		}
-
-	})
-
-	
-})
-
-images.forEach(image => {
-	observer.observe(image)
-})
-
-*/
-
-/*
-const sectionOne = document.querySelector('.about-tag');
-const sections = document.querySelectorAll('p');
-
-const options = {
-	root: null,
-	threshold: 0,
-	rootMargin: "-200px"
- };
-
-const observer = new IntersectionObserver(function(entries, observer) {
-	entries.forEach(entry => {
-		if(!entry.isIntersecting) {
-			return;
-		}
-		console.log(entry.target);
-		entry.target.classList.toggle('inverse');
-		observer.unobserve(entry.target);
-	});
-}, options);
-
-sections.forEach(section => {
-	observer.observe(section);
-});
-
-*/
 
 //About Tags Faders Observer
 
@@ -115,7 +64,6 @@ faders.forEach(fader => {
 blocks.forEach(block => {
 	appearOnScroll.observe(block);
 });
-
 
 
 //My Story Fader Observer
@@ -154,6 +102,8 @@ const slideOptions = {
 };
 const images = document.querySelectorAll('.image-card');
 const aboutImages = document.querySelectorAll('.about'); 
+const projects = document.querySelectorAll('.fpro');
+
 	
 const slideOnScroll = new IntersectionObserver
 	(function(
@@ -182,6 +132,11 @@ const slideOnScroll = new IntersectionObserver
 	aboutImages.forEach(aboutImage => {
 		slideOnScroll.observe(aboutImage);
 	});
+
+	projects.forEach(project => {
+		slideOnScroll.observe(project);
+	});
+
 
 //Accordion Observer/My Skills Observer
 
@@ -217,7 +172,7 @@ const circleType = new CircleType
 //Contact Me Pop Up Form
 	const openModal = document.querySelector('.cont-btn');
 	const closeModal = document.querySelector('.close-btn');
-	const subtimModal = document.querySelector('.submit-form');
+	const submitModal = document.querySelector('.submit-form');
 
 
 	openModal.addEventListener('click', () => {
@@ -257,9 +212,7 @@ const circleType = new CircleType
 
 	};
 
-//Validate Email 
-
-
+//Email Contact Form
 
 
 

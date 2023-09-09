@@ -760,6 +760,15 @@ button.plus {
     color: var(--white);
 }
 
+.fpro {
+    opacity: 0;
+}
+
+.fpro.appear {
+    opacity: 1;
+    transition: opacity 2s;
+}
+
 /*My Story Tag*/
 
 .slash {

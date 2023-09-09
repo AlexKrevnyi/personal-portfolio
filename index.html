@@ -17,6 +17,7 @@
 	<script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>
 	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 
 <body>
@@ -72,11 +73,11 @@
 				<h2>Contact me</h2>
 				<p>Feel free to contact me anytime</p>
 				
-				<form class="cont-form" method="dialog">
+				<form class="cont-form" method="dialog" action="#" id="submit">
 					<label for="name">Name</label>
 					<input type="text" id="name" name="name">
 					<label for="email">Email</label>
-  					<input type="email" name="email" id="email" onkeyup="validateEmail()"> 
+  					<input type="email" name="email" id="email"> 
   					<textarea id="message" name="message" rows="4" maxlength="700" placeholder="Enter your message"></textarea>
 					<button onclick="alert()" type="button" class="form-submit" id="sent">Send Email</button>
 					<button type="button" class="close-btn">Close</button>
@@ -392,7 +393,7 @@
 					<h1><span>&lt;</span>My Projects<span>&gt;</span></h1>
 				</div>
 				<div class="project-cont">
-					<div class="first-project">
+					<div class="first-project fpro">
 						<a href="https://beoncash.com/" target="_blank">
 							<img src="static/images/first-project.png" alt="beoncash">
 						</a>
@@ -400,7 +401,7 @@
 							<p>WEB</p>
 						</div>
 					</div>
-					<div class="second-project">
+					<div class="second-project fpro">
 						<a href="https://kinescoffee.com/index_EN.html" target="_blank">
 							<img src="static/images/second-project.png" alt="kineskop coffee">
 						</a>	
