@@ -214,7 +214,23 @@ const circleType = new CircleType
 
 //Email Contact Form
 
+var btn = document.getElementById('btn');
+btn.addEventListener('click', function(e) {
+	e.preventDefault()
+	var name = document.getElementById('name').value;
+	var email = document.getElementById('email').value;
+	var msg = document.getElementById('message').value;
 
+		Email.send({
+	    Host : "smtp.elasticemail.com",
+	    Username : "ovk9191@gmail.com",
+	    Password : "45690BD6632276D68D8148D86E1AA4D5D974",
+	    To : 'ovk9191@gmail.com',
+	    From : "ovk9191@gmail.com",
+	    Subject : "Personal Portfolio Website",
+	    Body : name + '<br>' + email + '<br>' + msg
+	})
+})
 
 
 
