@@ -88,6 +88,8 @@ body {
 .photo-container {
     z-index: 100;
     width: 40%;
+    max-width: 590px;
+    max-height: 394px;
     display: flex;
 }
 
@@ -101,7 +103,7 @@ body {
 .image-grid {
     margin: 2rem 60px 0 60px;
     display: grid;
-    grid-gap: 1.5rem;
+    grid-gap: 1rem;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     max-width: 100%;
@@ -265,7 +267,7 @@ body {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-template-rows: repeat(4, minmax(0, 1fr));
     max-width: 100%;
-    grid-gap: 1.5rem;
+    grid-gap: 1rem;
     max-height: 400px;
     min-width: 0;
 }
@@ -395,6 +397,7 @@ body {
 
 .accord-body p {
     margin-left: 2rem;
+    margin-right: 0.5rem;
     padding: 1rem 0;
     font-family: 'B612 Mono', monospace;
     font-size: 1rem;
@@ -887,6 +890,7 @@ button.plus {
     transition: 200ms;
 }
 
+
 ion-icon {
     font-size: 70px;
 }
@@ -1293,6 +1297,7 @@ footer {
         margin: 1rem 20px 1rem 20px;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 0.5rem;
     }
 
 /* Mobile About Me Page*/
@@ -1314,6 +1319,10 @@ footer {
 
     .about-tag {
         padding-top: 3rem;
+    }
+
+    .about-image-grid {
+        grid-gap: 0.5rem;
     }
 
     .facts {

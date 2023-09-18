@@ -78,6 +78,10 @@
   	box-shadow: 2px 2px 0 var(--black);
 }
 
+.cont-btn:hover {
+    opacity: 0.6;
+}
+
 /*Contact Pop Up Form*/
 
 .modal {
