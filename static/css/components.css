@@ -87,15 +87,18 @@
 .modal {
     min-width: 40%;
     max-width: 420px;
+    height: 574px;
     max-height: 100%;
     padding: 2rem 2rem 1rem 2rem;
     border-radius: 10px;
     background-color: var(--grey);
     border: 2px solid black;
+    overflow-y: hidden;
 }
 
 .modal::backdrop {
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .modal h2 {
