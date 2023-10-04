@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=B612+Mono:wght@400;700&display=swap');
 
+html {
+    overflow-x: hidden;
+}
 
 body {
     display: block;
